@@ -1,0 +1,35 @@
+
+@keyframes shun1{
+	0%{transform: rotateY(0deg); z-index: 100;}
+	100%{transform: rotateY(180deg); z-index: 0;}
+}
+@-moz-keyframes shun1{
+	0%{transform: rotateY(0deg); z-index: 100;}
+	100%{transform: rotateY(180deg); z-index: 0;}
+}
+@-webkit-keyframes shun1{
+	0%{transform: rotateY(0deg); z-index: 100;}
+	100%{transform: rotateY(180deg); z-index: 0;}
+}
+@-o-keyframes shun1{
+	0%{transform: rotateY(0deg); z-index: 100;}
+	100%{transform: rotateY(180deg); z-index: 0;}
+}
+
+@keyframes shun2{
+	0%{transform: rotateY(180deg); z-index: 0;}
+	100%{transform: rotateY(360deg); z-index: 100;}
+}
+@-moz-keyframes shun2{
+	0%{transform: rotateY(180deg); z-index: 0;}
+	100%{transform: rotateY(360deg); z-index: 100;}
+}
+@-webkit-keyframes shun2{
+	0%{transform: rotateY(180deg); z-index: 0;}
+	100%{transform: rotateY(360deg); z-index: 100;}
+}
+@-o-keyframes shun2{
+	0%{transform: rotateY(180deg); z-index: 0;}
+	100%{transform: rotateY(360deg); z-index: 100;}
+}
+

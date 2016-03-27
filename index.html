@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>南昌大学家园网</title>
+	<link rel="shortcut icon" href="http://home.ncu.edu.cn/2014/images/ncuhome_01.png">
+	<link rel="stylesheet" type="text/css" href="css/layout.css" />
+	<link rel="stylesheet" type="text/css" href="css/public.css"/>
+	<link rel="stylesheet" type="text/css" href="css/c3.css" />
+	<script src="js/webtoolkit.md5.js"></script>
+	<script type="text/javascript" src="js/jquery-1.12.2.min.js"></script>
+	<script type="text/javascript" src="js/vue.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<div class="topper">
+		<div class="logo">
+			<div class="contents">
+				<a href="http://www.ncuhome.cn" id="logo">
+					<img src="image/logo2.0.png"/>
+				</a>
+			</div>
+		</div>
+		<div class="nav_bar" id="nav_bar">
+			<div class="contents" style="position:relative;">
+				<ul class="navs" id="navs">
+					<li class="nav pointon" index="1" topoint="72">首页</li>
+					<li class="nav" index="2" topoint="136">校园资讯
+						<ul toheight="101">
+							<li><a href="">校园动态</a></li>
+							<li><a href="">信息公开</a></li>
+							<li><a href="">校园观点</a></li>
+							<li><a href="">媒体关注</a></li>
+							<div class="clear"></div>
+						</ul>
+					</li>
+					<li class="nav" index="3" topoint="212">学生工作
+						<ul toheight="101">
+							<li><a href="">主题教育</a></li>
+							<li><a href="http://www.ncuhome.cn/NewIndex2013/Newparty.aspx">学生党建</a></li>
+							<li><a href="http://people.ncuhome.cn/">校园人物</a></li>
+							<li><a href="">资料下载</a></li>
+							<li><a href="http://www.ncuhome.cn/Newindex2013/NewInstitution.aspx">机构设置</a></li>
+							<li><a href="http://www.ncuhome.cn/Default.aspx?partID=433">管理制度</a></li>
+							<li><a href="http://passport.ncuhome.cn/NewXZZX/AppAssemble/xnbs.aspx">办事指南</a></li>
+							<div class="clear"></div>
+						</ul>
+					</li>
+					<li class="nav" index="4" topoint="290">互联家园
+						<ul toheight="101">
+							<li><a href="">新生指南</a></li>
+							<li><a href="http://salon.ncuhome.cn/">活动讲座</a></li>
+							<li><a href="http://cor.ncuhome.cn/">社团组织</a></li>
+							<li><a href="">下载中心</a></li>
+							<li><a href="http://special.ncuhome.cn/">家园专题</a></li>
+							<li><a href="">南大映象</a></li>
+							<li><a href="http://k.ncuhome.cn/know-all_1/index.html">百事通</a></li>
+							<div class="clear"></div>
+						</ul>
+					</li>
+					<li class="nav" index="5" topoint="365">生活服务
+						<ul toheight="50">
+							<li><a href="">教工服务</a></li>
+							<li><a href="">学生服务</a></li>
+							<div class="clear"></div>
+						</ul>
+					</li>
+					<li class="nav" index="6" id="xzjy" topoint="440">香樟家园</li>
+					<div class="clear"></div>
+					<!-- <div class="point" style="display:none;">
+						<div class="pointCon"></div>
+					</div> -->
+				</ul>
+				<div class="loading">
+					<input type="text" id="searchInput" placeholder="请输入关键字"/>
+					<input type="button" id="search" value=" "/>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="laoluo">
+		<div class="contents">
+			<div class="focus_container" id="focus_container">
+				<ul class="focus_images" id="focus_images" style="left:-73.1rem;">
+					<li class="focus_image" v-for="image in images"><img v-bind:alt="image.title" v-bind:src="image.picurl"></li>
+					<div class="clear"></div>
+				</ul>
+				<div class="change_focus" id="change_focus">
+					<ul id="focus_buttons">
+						<li class="on" index="1"></li>
+						<li index="2"></li>
+						<li index="3"></li>
+						<li index="4"></li>
+						<li index="5"></li>
+					</ul>
+					<!-- <span id="change_focus_left"></span> -->
+					<!-- <span id="change_focus_right"></span> -->
+				</div>
+			</div>
+			<div class="login">
+				<a href="" class="teachers">
+					<img class="teacher1" src="image/teacher_En.png"/>
+					<img class="teacher2" src="image/teacher_Ch.png"/>
+					<img class="teacher3" src="image/teacher_Img.png"/>
+				</a>
+				<a href="" class="students">
+					<img class="student1" src="image/student_En.png"/>
+					<img class="student2" src="image/student_Ch.png"/>
+					<img class="student3" src="image/student_Img.png"/>
+				</a>
+				<div class="up_in">
+					<p class="up_in_title">用户登录</p>
+					<p class="name">
+						<input type="text" id="user_name" placeholder="学工/工资号"/>
+					</p>
+					<p class="password">
+						<input type="password" id="user_pass" placeholder="密码"/>
+					</p>
+					<p class="member">
+						<input type="checkbox" id="checkbox"/>
+						<label>记住我</label>
+					</p>
+					<p class="submit">
+						<input type="submit" id="submit_btn" value="登录"/>
+						<a href="http://passport.ncuhome.cn/NewXZZX/Find/login_find2.aspx">忘记密码？</a>
+					</p>
+				</div>
+				<div class="up_in" style="display:none">
+					<p class="up_in_title">登录成功</p>
+					<p class="up_in_title">5204014051</p>
+					<p class="up_in_title">
+						<input type="button" value="个人中心"/>
+					</p>
+					<p class="up_in_title">
+						<input type="button" value="注销"/>
+					</p>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="school_infor">
+		<div class="contents">
+			<p class="title">校园资讯</p>
+			<ul class="school_infors" id="school_infors">
+				<li v-for="infor in infors">
+					<a href="">
+						<img v-bind:src="infor.pic">
+						<div class="school_infors_right">
+							<p class="infor_name">{{infor.inforName}}</p>
+							<p class="infor_time">{{infor.inforTime}}</p>
+							<p class="infor_add">{{infor.inforAdd}}</p>
+							<p class="infor_con">{{infor.inforCon}}</p>
+						</div>
+					</a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+			<input type="button" class="change" id="changeInfor"/>
+		</div>
+	</div>
+	<div class="education">
+		<div class="contents">
+			<p class="title">学生教育</p>
+			<ul class="educations" id="educations">
+				<li class="educationli">
+					<a href="http://www.baidu.com">
+						<img src="image/education.png">
+						<span>主题教育</span>
+						<p>代阳是个傻孩子</p>
+						<p>代阳是个大傻孩子</p>
+					</a>
+					<a href="http://www.taobao.com">
+						<img src="image/dang.png">
+						<span>主题教育</span>
+						<p>代阳是个傻孩子</p>
+						<p>代阳是个大傻孩子</p>
+					</a>
+				</li>
+				<li class="educationli">
+					<a href="http://www.baidu.com">
+						<img src="image/downloads.png">
+						<span>资料下载</span>
+						<p>代阳是个傻孩子</p>
+						<p>代阳是个大傻孩子</p>
+					</a>
+					<a href="http://www.taobao.com">
+						<img src="image/downloads.png">
+						<span>主题教育</span>
+						<p>代阳是个傻孩子</p>
+						<p>代阳是个大傻孩子</p>
+					</a>
+				</li>
+				<li class="educationli">
+					<a href="http://www.baidu.com">
+						<img src="image/dang.png">
+						<span>学生党建</span>
+						<p>代阳是个傻孩子</p>
+						<p>代阳是个大傻孩子</p>
+					</a>
+					<a href="http://www.taobao.com">
+						<img src="image/education.png">
+						<span>主题教育</span>
+						<p>代阳是个傻孩子</p>
+						<p>代阳是个大傻孩子</p>
+					</a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+			<input type="button" value="" id="edu_left"/>
+			<input type="button" value="" id="edu_right"/>
+		</div>
+	</div>
+	<div class="school_person">
+		<div class="contents">
+			<p class="title">校园人物</p>
+			<ul class="school_persons" id="school_persons">
+				<li v-for="person in persons" index="{{person.personIndex}}">
+					<div class="{{person.personImageName}}">
+						<div class="mengban" index="{{person.personIndex}}"></div>
+					</div>
+					<div class="{{person.ifShow}}" index="{{person.personIndex}}">
+						<p>{{person.personName}}</p>
+						<p>{{person.personInfor1}}</p>
+						<p>{{person.personInfor2}}</p>
+						<p>{{person.personInfor3}}</p>
+						<p>{{person.personInfor4}}</p>
+					</div>
+					<div class="clear"></div>
+				</li>
+				<div class="clear"></div>
+			</ul>
+			<input type="button" class="change" id="changePerson"/>
+		</div>
+	</div>
+	<div class="lecture">
+		<div class="contents">
+			<p class="title">活动讲座</p>
+			<ul class="lectures" id="lectures">
+				<li v-for="lecture in lectures">
+					<p class="name">{{lecture.lectureName}}</p>
+					<p>活动时间：{{lecture.lectureTime}}</p>
+					<p>活动地点：{{lecture.lectureAdd}}</p>
+					<p>活动类型：{{lecture.lectureType}}</p>
+					<p>主办方：{{lecture.lectureHost}}</p>
+				</li>
+				<div class="clear"></div>
+			</ul>
+			<input type="button" class="change" id="changeLecture"/>
+		</div>
+	</div>
+	<div class="xiangzhang">
+		<div class="contents">
+			<img src="image/phone.png">
+			<div class="xiangzhang_right">
+				<p class="title">香樟家园</p>
+				<p class="simple">About</p>
+				<p class="nosimple">“香樟家园”微信公众号创建于2015年7月，致力于为在校师生提供了校园资讯、信息查询、事务办理、校园活动等丰富多彩的移动互联网服务。</p>
+				<p class="simple">Honours</p>
+				<p class="nosimple">微信传播指数WCI6000+，于2015年8月获得腾讯公司“全国高校公众号排行榜专家推荐奖”。现已成为全国高校最具影响力的微信公众号之一。</p>
+				<p class="simple">Users</p>
+				<p class="nosimple">截至2015年11月13日 00:00:00，关注用户总数为61065</p>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="US">
+		<div class="contents">
+			<ul class="about_us" id="about_us">
+				<li class="about1" index="0">
+					<a href="">
+						<span class="simple simple1">
+							<p>关于我们</p>
+						</span>
+						<p class="nosimple">一切关于工作室的东东</p>
+					</a>
+				</li>
+				<li class="about2" index="1">
+					<a href="">
+						<span class="simple simple2">
+							<p>工作室地址</p>
+						</span>
+						<p class="nosimple mar">南昌大学前湖校区6栋214</p>
+						<p class="nosimple">南昌大学前湖校区7栋0层</p>
+					</a>
+				</li>
+				<li class="about3" index="2">
+					<a href="">
+						<span class="simple simple3">
+							<p>联系方式</p>
+						</span>
+						<p class="nosimple mar">电话：83969124/83968920</p>
+						<p class="nosimple">邮箱：ncuadmin@163.com</p>
+					</a>
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</div>
+	<div class="link">
+		<div class="contents">
+			<ul class="links">
+				<li class="links_li">
+					<ul>
+						<li><a href="">南昌大学</a></li>
+						<li><a href="">南昌大学新闻网</a></li>
+						<li><a href="">南昌大学教务在线</a></li>
+						<li><a href="">南昌大学招就信息网</a></li>
+					</ul>
+				</li>
+				<li class="links_li">
+					<ul>
+						<li><a href="">南昌大学</a></li>
+						<li><a href="">南昌大学新闻网</a></li>
+						<li><a href="">南昌大学教务在线</a></li>
+						<li><a href="">南昌大学招就信息网</a></li>
+					</ul>
+				</li>
+				<li class="links_li" id="erContainer" style="position:relative;">
+					<a href="http://user.qzone.qq.com/1503241991" class="qq" index="1"></a>
+					<a href="http://weibo.com/ncuhome" class="weibo" index="2"></a>
+					<a href="http://wx.ncuhome.cn" class="weixin" index="3"></a>
+					<img src="image/weixiner.png" class="erweima">
+				</li>
+				<div class="clear"></div>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="contents">
+			<p>Copyright 2001-2015 Nanchang University. All Rights Reserved. 赣B2-20050168号/网备36011002000011号</p>
+		</div>
+	</div>
+	<div id="back_top"></div>
+</div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script type="text/javascript" src="js/data.js"></script>
+<script type="text/javascript" src="js/public.js"></script>
+</html>

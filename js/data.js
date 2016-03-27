@@ -1,0 +1,60 @@
+var schoolInfor = new Vue({
+	el:"#school_infors",
+	data:{
+		infors:[
+			{inforName:"",inforTime:"",inforAdd:"",inforCon:"",pic:""},
+			{inforName:"",inforTime:"",inforAdd:"",inforCon:"",pic:""},
+			{inforName:"",inforTime:"",inforAdd:"",inforCon:"",pic:""},
+			{inforName:"",inforTime:"",inforAdd:"",inforCon:"",pic:""}
+		]
+	}
+});
+var vschoolPerson = new Vue({
+	el:"#school_persons",
+	data:{
+		persons:[
+			{personName:"",personInfor1:"",personInfor2:"",personInfor3:"",personInfor4:"",personIndex:1,personImageName:"person1",ifShow:"show"},
+			{personName:"",personInfor1:"",personInfor2:"",personInfor3:"",personInfor4:"",personIndex:2,personImageName:"person2",ifShow:"hide"},
+			{personName:"",personInfor1:"",personInfor2:"",personInfor3:"",personInfor4:"",personIndex:3,personImageName:"person3",ifShow:"hide"}
+		]
+	}
+});
+var vlecture = new Vue({
+	el:"#lectures",
+	data:{
+		lectures:[
+			{lectureName:"",lectureTime:"",lectureAdd:"",lectureType:"",lectureHost:""},
+			{lectureName:"",lectureTime:"",lectureAdd:"",lectureType:"",lectureHost:""},
+			{lectureName:"",lectureTime:"",lectureAdd:"",lectureType:"",lectureHost:""},
+			{lectureName:"",lectureTime:"",lectureAdd:"",lectureType:"",lectureHost:""},
+			{lectureName:"",lectureTime:"",lectureAdd:"",lectureType:"",lectureHost:""},
+			{lectureName:"",lectureTime:"",lectureAdd:"",lectureType:"",lectureHost:""}
+		]
+	}
+});
+var pic = new Vue({
+	el:"#focus_images",
+	data:{
+		images:[
+			{picurl:"",title:"",url:""},
+			{picurl:"",title:"",url:""},
+			{picurl:"",title:"",url:""},
+			{picurl:"",title:"",url:""},
+			{picurl:"",title:"",url:""},
+			{picurl:"",title:"",url:""},
+			{picurl:"",title:"",url:""}
+		]
+	}
+});
+var focusBtn = new Vue({
+	el:"#focus_buttons",
+	data:{
+		images:[
+			{picurl:"",title:""},
+			{picurl:"",title:""},
+			{picurl:"",title:""},
+			{picurl:"",title:""},
+			{picurl:"",title:""}
+		]
+	}
+})

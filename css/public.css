@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	font-family: "Microsoft YaHei";
+}
+html{
+	font-size: 62.5%;
+}
+body{
+	background-color: #f4f4f4;
+}
+.contents{
+	margin: 0 auto;
+	width: 96rem;
+	min-width: 96rem;
+}
+.clear{
+	clear: both;
+}
+
+.logo{
+	margin: 0.2rem 0;
+}
+.logo a{
+	color: #432e22;
+}
+.logo img{
+	display: block;
+	width: 20rem;
+}
+.our_name{
+	font-size: 1.4rem;
+}
+.our_url{
+	font-size: 1.4rem;
+}
+
+.nav_bar{
+	background-color: #2baae1;
+	top: 0px;
+	z-index: 9999;
+	width: 100%;
+	min-width: 96rem;
+}
+.navs{
+	padding-left: 5.1rem;
+	position: relative;
+}
+.nav{
+	float: left;
+	color: #f3f5f8;
+	font-size: 1.5rem;
+	padding: 1.2rem 1.5rem;
+	position: relative;
+	cursor: pointer;
+}
+.nav:hover ul{
+	transform: scale(1);
+}
+.nav ul{
+	position: absolute;
+	/*top: 4.2rem;*/
+	/*padding: 0rem 1rem;*/
+	z-index: 9999;
+	background-color: #fff;
+	overflow: hidden;
+	transition: .5s;
+	transform-origin: top center;
+	transform: scale(0);
+	text-align: center;
+}
+.nav:nth-child(2) ul,.nav:nth-child(5) ul{
+	width: 100%;
+	left: 0rem;
+}
+.nav:nth-child(3) ul, .nav:nth-child(4) ul{
+	width: 200%;
+	left: -50%;
+}
+.nav:nth-child(2) ul li,.nav:nth-child(5) ul li{
+	width: 100%;
+}
+.nav:nth-child(3) ul li,.nav:nth-child(4) ul li{
+	width: 50%;
+}
+.nav ul li{
+	color: #000;
+	display: inline-block;
+	height: 3rem;
+	line-height: 3rem;
+	text-align: center;
+	cursor: pointer;
+	float: left;
+	border-right: 1px solid #f4f4f4;
+	border-bottom: 1px solid #f4f4f4;
+	margin-right: -1px;
+}
+.nav ul li a{
+	color: #000;
+}
+.nav ul li a:hover{
+	color: red;
+}
+.nav:hover{
+	color: #40403e;
+	background: #6781a4;
+}
+.loading{
+	position: absolute;
+	right: 0rem;
+	top: 0.8rem;
+	padding: 0rem 1rem;
+	background: url(../image/searchbg.png) no-repeat bottom;
+	background-size: 19.5rem 0.5rem;
+}
+.loading input{
+	border: none;
+}
+.loading #searchInput{
+	background-color: #2baae1;
+	color: #fff;
+}
+.loading #search{
+	height: 2.4rem;
+	width: 2.4rem;
+	background: url(../image/search.png) no-repeat 100% 100%;
+	background-size: 80% 80%;
+	cursor: pointer;
+}
+.point{
+	transition: .7s;
+	width: 1.4rem;
+	height: 0.8rem;
+	position: absolute;
+	overflow: hidden;
+	bottom: -0.1rem;
+}
+.pointCon{
+	height: 0.9rem;
+	width: 0.9rem;
+	background-color: #fff;
+	transform: rotateZ(45deg);
+	margin: 0.3rem;
+}
